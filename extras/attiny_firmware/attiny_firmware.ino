@@ -1,18 +1,22 @@
 /**
  **************************************************
  *
- * @file        Template for attiny_firmware
- * @brief       Fill in sensor specific code.
+ * @file        attiny_firmware.ino
+ * @brief       Attiny firmware for potentiometer with easyC.
  *
-
  *
- * @authors     @ soldered.com
+ * @authors     Karlo Leksic for soldered.com
  ***************************************************/
 
 #include "easyC.h"
 #include <Wire.h>
 
+
 int addr = DEFAULT_ADDRESS;
+uint16_t resistance;
+byte threshold = 50;
+
+bool poslano;
 
 void setup()
 {
@@ -22,27 +26,39 @@ void setup()
     Wire.begin(addr);
     Wire.onReceive(receiveEvent);
     Wire.onRequest(requestEvent);
+
+    pinMode(PA5, INPUT); // Potentiometer pin on the attiny
+    pinMode(PA4, OUTPUT); // LED pin
 }
 
 void loop()
 {
-}
-
-
-void receiveEvent(int howMany)
-{
-    while (1 < Wire.available())
+    resistance = analogRead(PA5);
+    if(resistance > (threshold * 0.01 * 1024))
     {
-        char c = Wire.read();
+      digitalWrite(PA4, HIGH);
+    }
+    else
+    {
+      digitalWrite(PA4, LOW);
     }
 
-    char c = Wire.read();
+    delay(50); //Read resistance every 50 milliseconds
+
 }
 
-void requestEvent()
-{
-    int n = 5;
 
-    char a[n];
-    Wire.write(a, n);
+void receiveEvent(int howMany) 
+{
+    while (Wire.available())
+    {
+        threshold = Wire.read();
+    }
+}
+
+void requestEvent() 
+{
+    poslano = 1;
+    uint8_t *resistanceToSend = (uint8_t*)&resistance;
+    Wire.write(resistanceToSend, 2);
 }

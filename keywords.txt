@@ -6,11 +6,15 @@
 # Datatypes (KEYWORD1)
 ##################################################
 
+PotentiometerEasyC KEYWORD1
+
 ##################################################
 # Methods and Functions (KEYWORD2)
 ##################################################
 
-begin	KEYWORD2
+begin	           KEYWORD2
+getValue           KEYWORD2
+setThreshold       KEYWORD2
 
 ##################################################
 # Constants (LITERAL1)
