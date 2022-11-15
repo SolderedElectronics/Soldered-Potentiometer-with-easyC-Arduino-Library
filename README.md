@@ -1,10 +1,10 @@
-# NAZIV PROIZVODA Arduino library
+# Potentiometer with easyC Arduino library
 
-[![Make docs and publish to GitHub Pages](https://github.com/e-radionicacom/Soldered-Generic-Arduino-Library/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/e-radionicacom/Soldered-Generic-Arduino-Library/actions/workflows/make_docs.yml)
+[![Make docs and publish to GitHub Pages](https://github.com/SolderedElectronics/Soldered-Potentiometer-with-easyC-Arduino-Library/actions/workflows/make_docs.yml/badge.svg?branch=dev)](https://github.com/SolderedElectronics/Soldered-Potentiometer-with-easyC-Arduino-Library/actions/workflows/make_docs.yml)
 
-| ![Product name](https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg) |
+| ![Potentiometer with easyC](https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg) |
 | :---------------------------------------------------------------------------------------------: |
-| [NAZIV PROIZVODA](https://www.solde.red/SKU)                                                            |
+| [Potentiometer with easyC](https://www.solde.red/SKU)                                                            |
 
 OPIS PROIZVODA + LINK NA [easyC ecosystem](https://www.soldered.com/en/easyC). 
 
@@ -14,13 +14,13 @@ OPIS PROIZVODA + LINK NA [easyC ecosystem](https://www.soldered.com/en/easyC).
 - ***other*** - *keywords* file highlights function words in your IDE, *library.properties* enables implementation with Arduino Library Manager.
 
 ### Hardware design
-You can find hardware design for this board in *NAZIV PROIZVODA* hardware repository.
+You can find hardware design for this board in *Potentiometer with easyC* hardware repository.
 
 ### Documentation
 
-Access Arduino library documentation [here](https://SolderedElectronics.github.io/Soldered-Generic-Arduino-Library/).
+Access Arduino library documentation [here](https://github.com/SolderedElectronics/Soldered-Potentiometer-with-easyC-Arduino-Library).
 
-- Tutorial for using the NAZIV PROIZVODA board
+- Tutorial for using the Potentiometer with easyC board
 - Installing an Arduino library
 
 ### Board compatibility
