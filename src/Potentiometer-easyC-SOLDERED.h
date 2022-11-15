@@ -23,7 +23,7 @@ class PotentiometerEasyC : public EasyC
     void setThreshold(byte threshold);
 
   protected:
-  void initializeNative();
+    void initializeNative();
 
   private:
     int potValue;
