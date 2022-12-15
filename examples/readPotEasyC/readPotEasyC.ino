@@ -17,7 +17,7 @@ void setup()
 {
     Serial.begin(115200); // Start serial communication at 115200
     pot.begin();          // Start I2C communication on default address
-    pot.setThreshold(10); // Set threshold value to turn on the LED. Default is 50%
+    pot.setThreshold(10); // Set threshold value in percent to turn on the LED. Default is 50%
 }
 
 void loop()
