@@ -16,8 +16,6 @@ int addr = DEFAULT_ADDRESS;
 uint16_t resistance;
 byte threshold = 50;
 
-bool poslano;
-
 void setup()
 {
     initDefault();
@@ -27,7 +25,7 @@ void setup()
     Wire.onReceive(receiveEvent);
     Wire.onRequest(requestEvent);
 
-    pinMode(PA5, INPUT); // Potentiometer pin on the attiny
+    pinMode(PA5, INPUT);  // Potentiometer pin on the attiny
     pinMode(PA4, OUTPUT); // LED pin
 }
 
@@ -58,7 +56,6 @@ void receiveEvent(int howMany)
 
 void requestEvent() 
 {
-    poslano = 1;
     uint8_t *resistanceToSend = (uint8_t*)&resistance;
     Wire.write(resistanceToSend, 2);
 }

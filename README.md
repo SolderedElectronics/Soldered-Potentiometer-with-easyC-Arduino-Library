@@ -4,9 +4,9 @@
 
 | ![Potentiometer with easyC](https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg) |
 | :---------------------------------------------------------------------------------------------: |
-| [Potentiometer with easyC](https://www.solde.red/SKU)                                                            |
+| [Potentiometer with easyC](https://www.solde.red/333193)                                                            |
 
-OPIS PROIZVODA + LINK NA [easyC ecosystem](https://www.soldered.com/en/easyC). 
+Potentiometer board compliant to [easyC ecosystem](https://www.soldered.com/en/easyC). 
 
 ### Repository Contents
 - **/src** - source files for the library (.h & .cpp)
@@ -18,7 +18,7 @@ You can find hardware design for this board in *Potentiometer with easyC* hardwa
 
 ### Documentation
 
-Access Arduino library documentation [here](https://github.com/SolderedElectronics/Soldered-Potentiometer-with-easyC-Arduino-Library).
+Access Arduino library documentation [here](https://solderedelectronics.github.io/Soldered-Potentiometer-with-easyC-Arduino-Library/).
 
 - Tutorial for using the Potentiometer with easyC board
 - Installing an Arduino library
