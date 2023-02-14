@@ -25,9 +25,7 @@
 var NAVTREE =
 [
   [ "Potentiometer with easyC by Soldered", "index.html", [
-    [ "Potentiometer with easyC Arduino library", "index.html", [
-      [ "Have fun!", "index.html#autotoc_md7", null ]
-    ] ],
+    [ "Potentiometer with easyC Arduino library", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
