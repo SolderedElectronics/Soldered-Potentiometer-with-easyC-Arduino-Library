@@ -30,7 +30,7 @@
   <td id="projectalign">
    <div id="projectname">Potentiometer with easyC by Soldered<span id="projectnumber">&#160;1.0.0</span>
    </div>
-   <div id="projectbrief">This is library for potentiometer with easyC created by Slodered</div>
+   <div id="projectbrief">This is library for potentiometer with easyC created by Soldered</div>
   </td>
  </tr>
  </tbody>
@@ -111,12 +111,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9fb9d879f9b9b84df29bf085ad4bdeb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_potentiometer_easy_c.html#ad9fb9d879f9b9b84df29bf085ad4bdeb">PotentiometerEasyC</a> ()</td></tr>
 <tr class="memdesc:ad9fb9d879f9b9b84df29bf085ad4bdeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for easyC potentiometer.  <br /></td></tr>
 <tr class="separator:ad9fb9d879f9b9b84df29bf085ad4bdeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf70b6fb360a284f9867804845fb5c0a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_potentiometer_easy_c.html#aaf70b6fb360a284f9867804845fb5c0a">getValue</a> ()</td></tr>
-<tr class="memdesc:aaf70b6fb360a284f9867804845fb5c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get potentiometer value over I2C.  <br /></td></tr>
-<tr class="separator:aaf70b6fb360a284f9867804845fb5c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b2f76d6257ee8d53efa077f0d18dc1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_potentiometer_easy_c.html#a8b2f76d6257ee8d53efa077f0d18dc1e">setThreshold</a> (byte <a class="el" href="class_potentiometer_easy_c.html#a77c01b7192174ffbcdb1d2dbd8fae26c">threshold</a>)</td></tr>
-<tr class="memdesc:a8b2f76d6257ee8d53efa077f0d18dc1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set threshold value to turn on LED on the breakout. E.g. after 60% potentiometer's value, turn on the LED. Default is 50%.  <br /></td></tr>
-<tr class="separator:a8b2f76d6257ee8d53efa077f0d18dc1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ceec59cfb166833ac509e7cad8ce42"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_potentiometer_easy_c.html#ab6ceec59cfb166833ac509e7cad8ce42">getRawValue</a> ()</td></tr>
+<tr class="memdesc:ab6ceec59cfb166833ac509e7cad8ce42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get raw potentiometer value over I2C.  <br /></td></tr>
+<tr class="separator:ab6ceec59cfb166833ac509e7cad8ce42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a7655f609dad0f55a1ceba5d39eca8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_potentiometer_easy_c.html#a88a7655f609dad0f55a1ceba5d39eca8">getValue</a> ()</td></tr>
+<tr class="memdesc:a88a7655f609dad0f55a1ceba5d39eca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get percentage potentiometer value over I2C.  <br /></td></tr>
+<tr class="separator:a88a7655f609dad0f55a1ceba5d39eca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46611eea0eda3831df37447da473617f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_potentiometer_easy_c.html#a46611eea0eda3831df37447da473617f">setRawThreshold</a> (uint16_t threshold)</td></tr>
+<tr class="memdesc:a46611eea0eda3831df37447da473617f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the raw threshold value to turn on LED on the breakout. E.g. after 512 potentiometer's value, turn on the LED.  <br /></td></tr>
+<tr class="separator:a46611eea0eda3831df37447da473617f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead27d89f70c8468dcb5516b562d2ab4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_potentiometer_easy_c.html#aead27d89f70c8468dcb5516b562d2ab4">setThreshold</a> (float threshold)</td></tr>
+<tr class="memdesc:aead27d89f70c8468dcb5516b562d2ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the threshold value in percentage to turn on LED on the breakout. E.g. after 50% potentiometer's value, turn on the LED.  <br /></td></tr>
+<tr class="separator:aead27d89f70c8468dcb5516b562d2ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_easy_c"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_easy_c')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_easy_c.html">EasyC</a></td></tr>
 <tr class="memitem:a2ea672a225a32eab52c2b20733fd26bd inherit pub_methods_class_easy_c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_easy_c.html#a2ea672a225a32eab52c2b20733fd26bd">EasyC</a> ()</td></tr>
 <tr class="memdesc:a2ea672a225a32eab52c2b20733fd26bd inherit pub_methods_class_easy_c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main constructor for easyC version.  <br /></td></tr>
@@ -150,10 +156,6 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a23b93da02c0c2a42133e7b0f5f98b979"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_potentiometer_easy_c.html#a23b93da02c0c2a42133e7b0f5f98b979">potValue</a></td></tr>
-<tr class="separator:a23b93da02c0c2a42133e7b0f5f98b979"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77c01b7192174ffbcdb1d2dbd8fae26c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_potentiometer_easy_c.html#a77c01b7192174ffbcdb1d2dbd8fae26c">threshold</a></td></tr>
-<tr class="separator:a77c01b7192174ffbcdb1d2dbd8fae26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02174fb112fbbdb5474e54c5dae8cdb5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_potentiometer_easy_c.html#a02174fb112fbbdb5474e54c5dae8cdb5">pin</a></td></tr>
 <tr class="separator:a02174fb112fbbdb5474e54c5dae8cdb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -192,14 +194,14 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aaf70b6fb360a284f9867804845fb5c0a" name="aaf70b6fb360a284f9867804845fb5c0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf70b6fb360a284f9867804845fb5c0a">&#9670;&#160;</a></span>getValue()</h2>
+<a id="ab6ceec59cfb166833ac509e7cad8ce42" name="ab6ceec59cfb166833ac509e7cad8ce42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ceec59cfb166833ac509e7cad8ce42">&#9670;&#160;</a></span>getRawValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int PotentiometerEasyC::getValue </td>
+          <td class="memname">int PotentiometerEasyC::getRawValue </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -207,8 +209,28 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Function to get potentiometer value over I2C. </p>
-<dl class="section return"><dt>Returns</dt><dd>Potentiometer value </dd></dl>
+<p>Function to get raw potentiometer value over I2C. </p>
+<dl class="section return"><dt>Returns</dt><dd>Raw potentiometer value (0 - 1023) </dd></dl>
+
+</div>
+</div>
+<a id="a88a7655f609dad0f55a1ceba5d39eca8" name="a88a7655f609dad0f55a1ceba5d39eca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88a7655f609dad0f55a1ceba5d39eca8">&#9670;&#160;</a></span>getValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PotentiometerEasyC::getValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to get percentage potentiometer value over I2C. </p>
+<dl class="section return"><dt>Returns</dt><dd>Percentage potentiometer value (0 - 100) </dd></dl>
 
 </div>
 </div>
@@ -241,8 +263,35 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a8b2f76d6257ee8d53efa077f0d18dc1e" name="a8b2f76d6257ee8d53efa077f0d18dc1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b2f76d6257ee8d53efa077f0d18dc1e">&#9670;&#160;</a></span>setThreshold()</h2>
+<a id="a46611eea0eda3831df37447da473617f" name="a46611eea0eda3831df37447da473617f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46611eea0eda3831df37447da473617f">&#9670;&#160;</a></span>setRawThreshold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PotentiometerEasyC::setRawThreshold </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>threshold</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the raw threshold value to turn on LED on the breakout. E.g. after 512 potentiometer's value, turn on the LED. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uint16_t</td><td>threshold Integer value which represents raw threshold value. (0 - 1023)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+
+</div>
+</div>
+<a id="aead27d89f70c8468dcb5516b562d2ab4" name="aead27d89f70c8468dcb5516b562d2ab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aead27d89f70c8468dcb5516b562d2ab4">&#9670;&#160;</a></span>setThreshold()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,17 +299,17 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void PotentiometerEasyC::setThreshold </td>
           <td>(</td>
-          <td class="paramtype">byte&#160;</td>
-          <td class="paramname"><em>_threshold</em></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>threshold</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set threshold value to turn on LED on the breakout. E.g. after 60% potentiometer's value, turn on the LED. Default is 50%. </p>
+<p>Set the threshold value in percentage to turn on LED on the breakout. E.g. after 50% potentiometer's value, turn on the LED. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_threshold</td><td>Integer value in percent which represent threshold.</td></tr>
+    <tr><td class="paramname">float</td><td>threshold Value which represents percentage threshold value. (0 - 100)</td></tr>
   </table>
   </dd>
 </dl>
@@ -291,50 +340,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a23b93da02c0c2a42133e7b0f5f98b979" name="a23b93da02c0c2a42133e7b0f5f98b979"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23b93da02c0c2a42133e7b0f5f98b979">&#9670;&#160;</a></span>potValue</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PotentiometerEasyC::potValue</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a77c01b7192174ffbcdb1d2dbd8fae26c" name="a77c01b7192174ffbcdb1d2dbd8fae26c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77c01b7192174ffbcdb1d2dbd8fae26c">&#9670;&#160;</a></span>threshold</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t PotentiometerEasyC::threshold</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_potentiometer-easy_c-_s_o_l_d_e_r_e_d_8h_source.html">Potentiometer-easyC-SOLDERED.h</a></li>
 <li><a class="el" href="_potentiometer-easy_c-_s_o_l_d_e_r_e_d_8cpp.html">Potentiometer-easyC-SOLDERED.cpp</a></li>
@@ -347,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
     <ul>
         <li class="navelem"><a class="el" href="class_potentiometer_easy_c.html">PotentiometerEasyC</a></li>
         <li class="footer">
-            Generated on Wed Feb 15 2023 09:45:16 for Potentiometer with easyC by Soldered by <a href="http://www.doxygen.org/index.html">
+            Generated on Sat Apr 1 2023 12:15:59 for Potentiometer with easyC by Soldered by <a href="http://www.doxygen.org/index.html">
                 <img class="footer" src="doxygen.png" alt="doxygen"
                     onerror="this.onerror=null;this.src='doxygen.svg';" /></a> 1.9.6.
             Dark theme by <a href="http://majerle.eu" target="_new">Tilen Majerle</a>. All rights reserved.
