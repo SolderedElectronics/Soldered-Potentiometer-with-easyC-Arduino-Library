@@ -70,7 +70,7 @@ float PotentiometerEasyC::getValue()
 void PotentiometerEasyC::setRawThreshold(uint16_t threshold)
 {
     // Check if the threshold is the proper value
-    if(threshold < 0 || threshold > 1023)
+    if (threshold < 0 || threshold > 1023)
     {
         return;
     }
@@ -93,7 +93,7 @@ void PotentiometerEasyC::setRawThreshold(uint16_t threshold)
 void PotentiometerEasyC::setThreshold(float threshold)
 {
     // Check if the threshold is the proper value
-    if(threshold < 0 || threshold > 100)
+    if (threshold < 0 || threshold > 100)
     {
         return;
     }
