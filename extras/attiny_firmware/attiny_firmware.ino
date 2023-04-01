@@ -12,50 +12,65 @@
 #include <Wire.h>
 
 
-int addr = DEFAULT_ADDRESS;
-uint16_t resistance;
-byte threshold = 50;
+int addr = DEFAULT_ADDRESS; // 0x30
+uint16_t analogValue;       // For reading potentiometer analog value
+uint16_t threshold = 512;   // Raw default threshold value (50%)
+
+#define POT_PIN           PA5 // Potentiometer pin on the attiny
+#define LED_THRESHOLD_PIN PA4 // LED pin for indicating the threshold
 
 void setup()
 {
+    // Set I2C address selector as input and get I2C address
     initDefault();
     addr = getI2CAddress();
 
+    // Init I2C communication
     Wire.begin(addr);
     Wire.onReceive(receiveEvent);
     Wire.onRequest(requestEvent);
 
-    pinMode(PA5, INPUT);  // Potentiometer pin on the attiny
-    pinMode(PA4, OUTPUT); // LED pin
+    pinMode(POT_PIN, INPUT);
+    pinMode(LED_THRESHOLD_PIN, OUTPUT);
 }
 
 void loop()
 {
-    resistance = analogRead(PA5);
-    if(resistance > (threshold * 0.01 * 1024))
+    // Read potentiometer analog value
+    analogValue = analogRead(POT_PIN);
+
+    // Set a threshold LED on the breakout depending on the set threshold
+    if (analogValue > threshold)
     {
-      digitalWrite(PA4, HIGH);
+        digitalWrite(LED_THRESHOLD_PIN, HIGH);
     }
     else
     {
-      digitalWrite(PA4, LOW);
+        digitalWrite(LED_THRESHOLD_PIN, LOW);
     }
-
-    delay(50); //Read resistance every 50 milliseconds
-
 }
 
-
-void receiveEvent(int howMany) 
+// When the breakout receives the data over I2C, this function is executing
+void receiveEvent(int howMany)
 {
-    while (Wire.available())
+    // Array for the raw threshold in bytes
+    uint8_t rawThresholdBytes[2];
+
+    // If data is incoming
+    if (Wire.available())
     {
-        threshold = Wire.read();
+        // Read 2 bytes which represents the raw threshold value
+        Wire.readBytes(rawThresholdBytes, 2);
     }
+
+    // Converts this value into uint16_t
+    threshold = *(uint16_t *)rawThresholdBytes;
 }
 
-void requestEvent() 
+// When the master requests the data, this function is executing
+void requestEvent()
 {
-    uint8_t *resistanceToSend = (uint8_t*)&resistance;
-    Wire.write(resistanceToSend, 2);
+    // Because I2C sends bytes, separate this value into 2 appropriate bytes for sending
+    uint8_t *analogValueForSend = (uint8_t *)&analogValue;
+    Wire.write(analogValueForSend, 2);
 }

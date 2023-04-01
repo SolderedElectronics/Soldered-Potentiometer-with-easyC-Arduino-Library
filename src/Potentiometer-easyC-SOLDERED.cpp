@@ -31,39 +31,74 @@ PotentiometerEasyC::PotentiometerEasyC()
 }
 
 /**
- * @brief                   Function to get potentiometer value over I2C
+ * @brief                   Function to get raw potentiometer value over I2C
  *
- * @return                  Potentiometer value
+ * @return                  Raw potentiometer value (0 - 1023)
  */
-int PotentiometerEasyC::getValue()
+int PotentiometerEasyC::getRawValue()
 {
-    byte data[2];
-    Wire.requestFrom(0x30, 2);
-    int i = 0;
-    while (Wire.available() > 0)
-    {
-        data[i] = Wire.read();
-        i++;
-    }
+    // Read bytes of raw potentiometer data
+    char data[2];
+    readData(data, 2);
 
+    // Convert it to uint16_t
     uint16_t resistance = 0;
     resistance = *(uint16_t *)data;
 
+    // Return converted value
     return resistance;
 }
 
 /**
- * @brief                    Set threshold value to turn on LED on the breakout.
- *                           E.g. after 60% potentiometer's value, turn on the LED.
- *                           Default is 50%.
+ * @brief                   Function to get percentage potentiometer value over I2C
  *
- * @param _threshold         Integer value in percent which represent threshold.
+ * @return                  Percentage potentiometer value (0 - 100)
+ */
+float PotentiometerEasyC::getValue()
+{
+    return (getRawValue() / float(1023)) * 100;
+}
+
+/**
+ * @brief                    Set the raw threshold value to turn on LED on the breakout.
+ *                           E.g. after 512 potentiometer's value, turn on the LED.
+ *
+ * @param uint16_t threshold         Integer value which represents raw threshold value. (0 - 1023)
  *
  * @return                   None
  */
-void PotentiometerEasyC::setThreshold(byte _threshold)
+void PotentiometerEasyC::setRawThreshold(uint16_t threshold)
 {
-    threshold = _threshold;
-    // posalji mu threshold
-    sendData(&threshold, 1);
+    // Check if the threshold is the proper value
+    if(threshold < 0 || threshold > 1023)
+    {
+        return;
+    }
+
+    // Convert raw threshold value into 2 bytes for sending
+    uint8_t *rawThreshold = (uint8_t *)&threshold;
+
+    // Send raw threshold
+    sendData(rawThreshold, 2);
+}
+
+/**
+ * @brief                    Set the  threshold value in percentage to turn on LED on the breakout.
+ *                           E.g. after 50% potentiometer's value, turn on the LED.
+ *
+ * @param float threshold    Value which represents percentage threshold value. (0 - 100)
+ *
+ * @return                   None
+ */
+void PotentiometerEasyC::setThreshold(float threshold)
+{
+    // Check if the threshold is the proper value
+    if(threshold < 0 || threshold > 100)
+    {
+        return;
+    }
+
+    // Convert percentage threshold to raw value and send it
+    uint16_t rawThreshold = threshold * 0.01 * 1024;
+    setRawThreshold(rawThreshold);
 }

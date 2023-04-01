@@ -19,15 +19,17 @@ class PotentiometerEasyC : public EasyC
 {
   public:
     PotentiometerEasyC();
-    int getValue();
-    void setThreshold(byte threshold);
+    int getRawValue();
+    float getValue();
+    void setRawThreshold(uint16_t threshold);
+    void setThreshold(float threshold);
 
   protected:
     void initializeNative();
 
   private:
-    int potValue;
-    uint8_t threshold;
+    // int potValue;
+    // uint8_t threshold;
     int pin;
 };
 

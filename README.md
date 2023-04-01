@@ -27,7 +27,7 @@ Access Arduino library documentation [here](https://solderedelectronics.github.i
 
 The library is compatible with board & microcontroller families shown in green below: 
 
-[![Compile Sketches](http://github-actions.40ants.com/e-radionicacom/Soldered-Generic-Arduino-Library/matrix.svg?branch=dev&only=Compile%20Sketches)](https://github.com/e-radionicacom/Soldered-Generic-Arduino-Library/actions/workflows/compile_test.yml)
+[![Compile Sketches](https://github-actions.40ants.com/SolderedElectronics/Soldered-Generic-Arduino-Library/matrix.svg?branch=dev&only=Compile%20Sketches)](https://github.com/SolderedElectronics/Soldered-Generic-Arduino-Library/actions/workflows/compile_test.yml)
 
 
 ### About Soldered
