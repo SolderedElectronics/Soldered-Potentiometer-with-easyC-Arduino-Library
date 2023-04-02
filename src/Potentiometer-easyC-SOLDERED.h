@@ -28,8 +28,6 @@ class PotentiometerEasyC : public EasyC
     void initializeNative();
 
   private:
-    // int potValue;
-    // uint8_t threshold;
     int pin;
 };
 
